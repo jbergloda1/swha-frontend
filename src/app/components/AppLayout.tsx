@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { FaTachometerAlt, FaQuestionCircle, FaMicrophone, FaRegFileAudio, FaSignOutAlt } from 'react-icons/fa';
+import { FaTachometerAlt, FaQuestionCircle, FaMicrophone, FaRegFileAudio, FaSignOutAlt, FaImage } from 'react-icons/fa';
 import { useAuth } from '../context/AuthContext';
 
 const navLinks = [
@@ -10,6 +10,7 @@ const navLinks = [
   { name: 'Q&A / Lipsync', href: '/qa', icon: FaQuestionCircle },
   { name: 'Text to Speech', href: '/tts-page', icon: FaMicrophone },
   { name: 'Speech to Text', href: '/stt', icon: FaRegFileAudio },
+  { name: 'Image Captioning', href: '/captioning', icon: FaImage },
 ];
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {

@@ -124,7 +124,7 @@ export default function SpeechToTextPage() {
         else if (data.error) {
           console.error('❌ Server error:', data.error);
           setError(`Server error: ${data.error}`);
-          setPartialResult("");
+          setPartialResult(null);
           setIsRecording(false);
           setLoading(false);
         }
@@ -137,7 +137,7 @@ export default function SpeechToTextPage() {
         else if (data.text !== undefined && !data.type) {
           console.log('📝 Legacy transcription result:', data.text);
           setResult(data);
-          setPartialResult("");
+          setPartialResult(null);
           setIsRecording(false);
           setLoading(false);
         }
@@ -164,7 +164,7 @@ export default function SpeechToTextPage() {
       setSocketReady(false);
       setIsRecording(false);
       setLoading(false);
-      setPartialResult("");
+      setPartialResult(null);
       
       // Handle specific close codes theo tài liệu
       if (event.code === 4001) {
