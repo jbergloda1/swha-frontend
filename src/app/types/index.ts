@@ -4,3 +4,9 @@ export interface LoginCredentials {
 }
 
 // Add other shared types here in the future 
+
+export interface TableDetectParams {
+  file?: File;
+  imageUrl?: string;
+  visualize?: boolean;
+} 
